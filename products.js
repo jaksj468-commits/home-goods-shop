@@ -1,11 +1,2 @@
-// Sample product data. Replace each affiliateUrl with your own valid product referral link before launch.
-window.PRODUCTS = [
-  {id:1,name:"Multi-Tier Kitchen Organizer",category:"Kitchen",description:"Create a tidy, organized kitchen with convenient tiered storage.",price:"29.9",emoji:"🧺",tag:"Popular Pick",deal:true,new:false,affiliateUrl:"https://www.1688.com/"},
-  {id:2,name:"Clear Stackable Storage Drawer",category:"Home Storage",description:"Keep wardrobes and desktops organized with easy-access storage.",price:"19.9",emoji:"🗃️",tag:"Editor's Pick",deal:true,new:false,affiliateUrl:"https://www.1688.com/"},
-  {id:3,name:"Hands-Free Flat Mop",category:"Cleaning",description:"Lightweight and easy to use for everyday floor cleaning.",price:"35.9",emoji:"🧹",tag:"Everyday Essential",deal:false,new:true,affiliateUrl:"https://www.1688.com/"},
-  {id:4,name:"Minimalist Ceramic Mug",category:"Everyday Essentials",description:"A timeless, comfortable mug to elevate your daily coffee or tea.",price:"16.8",emoji:"☕",tag:"New Arrival",deal:false,new:true,affiliateUrl:"https://www.1688.com/"},
-  {id:5,name:"No-Drill Wall-Mounted Bathroom Shelf",category:"Bathroom",description:"Keep toiletries neatly arranged and free up counter space.",price:"22.9",emoji:"🧴",tag:"Special Offer",deal:true,new:false,affiliateUrl:"https://www.1688.com/"},
-  {id:6,name:"Silicone Heat-Resistant Kitchen Mat",category:"Kitchen",description:"A flexible, heat-resistant mat for everyday kitchen protection.",price:"9.9",emoji:"🍳",tag:"Great Value",deal:true,new:false,affiliateUrl:"https://www.1688.com/"},
-  {id:7,name:"Adjustable Desktop Phone Stand",category:"Tech Accessories",description:"Multiple viewing angles for video calls and hands-free viewing.",price:"12.9",emoji:"📱",tag:"New Arrival",deal:false,new:true,affiliateUrl:"https://www.1688.com/"},
-  {id:8,name:"Foldable Laundry Basket",category:"Home Storage",description:"Lightweight, foldable storage for bedrooms and bathrooms.",price:"26.9",emoji:"🧺",tag:"Popular Pick",deal:false,new:false,affiliateUrl:"https://www.1688.com/"}
-];
+// Product catalog cleared.
+window.PRODUCTS = [];
