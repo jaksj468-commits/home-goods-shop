@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f44336">
+  <meta name="description" content="好物集市 - 精选家居百货、厨房用品、收纳清洁与日常好物，发现实用又划算的生活好物。">
+  <title>好物集市 - 精选生活好物</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline">好物认真挑 · 让日常生活更简单 <span>精选好物 / 每日更新</span></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="好物集市首页"><span class="brand-mark">好</span><span>好物集市<small>GOOD LIFE MARKET</small></span></a>
+      <form class="search" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="搜一搜：收纳盒、厨房好物、清洁用品…" aria-label="搜索商品">
+        <button type="submit">搜索</button>
+      </form>
+      <a class="header-link" href="#deals">今日优惠 <b>›</b></a>
+    </div>
+  </header>
+  <nav class="category-nav" aria-label="商品分类">
+    <div class="nav-inner" id="categoryNav">
+      <button class="nav-item active" data-category="全部">首页</button>
+      <button class="nav-item" data-category="厨房用品">厨房用品</button>
+      <button class="nav-item" data-category="家居收纳">家居收纳</button>
+      <button class="nav-item" data-category="清洁用品">清洁用品</button>
+      <button class="nav-item" data-category="居家日用">居家日用</button>
+      <button class="nav-item" data-category="浴室用品">浴室用品</button>
+      <button class="nav-item" data-category="数码小物">数码小物</button>
+    </div>
+  </nav>
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">GOOD THINGS FOR EVERYDAY</div>
+        <h1>把好用的生活好物<br><em>带回家</em></h1>
+        <p>从厨房到客厅，从收纳到清洁，认真挑选实用、耐看又划算的日常好物。</p>
+        <a class="hero-cta" href="#products">逛逛精选好物 <span>→</span></a>
+        <div class="hero-notes"><span>✓ 实用精选</span><span>✓ 优惠推荐</span><span>✓ 每日发现</span></div>
+      </div>
+      <div class="hero-art" aria-label="家居生活主题插画">
+        <div class="sun"></div><div class="plant">🌿</div><div class="vase">🏺</div><div class="basket">🧺</div>
+        <div class="art-label">让生活<br>多一点美好</div>
+      </div>
+    </section>
+    <section class="benefits wrap">
+      <div><span>✦</span><b>精选实用好物</b><small>注重日常使用体验</small></div>
+      <div><span>⌂</span><b>丰富生活分类</b><small>居家所需一站发现</small></div>
+      <div><span>♡</span><b>优惠信息汇总</b><small>好价值得多看一眼</small></div>
+    </section>
+    <section class="wrap section" id="deals">
+      <div class="section-heading"><div><div class="eyebrow red">GOOD PRICE</div><h2>今日优惠 <span>精选好价，遇见就别错过</span></h2></div><button class="text-button" data-filter="deals">查看全部 →</button></div>
+      <div class="deal-banner"><div><strong>把日常过得更有品质</strong><p>实用小物 · 居家灵感 · 生活好价</p></div><div class="deal-stamp">好物<br>推荐</div></div>
+    </section>
+    <section class="wrap section" id="products">
+      <div class="section-heading"><div><div class="eyebrow red">HANDPICKED FOR YOU</div><h2>人气好物 <span>为日常生活挑选的小惊喜</span></h2></div><div class="filter-tabs" id="filterTabs"><button class="selected" data-filter="all">全部</button><button data-filter="deals">优惠</button><button data-filter="new">新品</button></div></div>
+      <div class="result-line" id="resultLine">为你精选好物</div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>没有找到相关商品，换个关键词试试吧。</div>
+    </section>
+    <section class="wrap tip-box"><div class="tip-icon">✿</div><div><h3>发现好物，也分享好生活</h3><p>这里汇集日常家居与百货精选。商品价格、库存及优惠以实际购买页面为准。</p></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark">好</span><span>好物集市<small>GOOD LIFE MARKET</small></span></a><p>认真挑选生活好物，让每一天都更舒心。</p><small>© <span id="year"></span> 好物集市 · 商品信息仅供参考</small><small class="disclosure">推广说明：部分商品链接可能为推广链接；通过链接购买，网站可能获得推广佣金，商品价格不因此额外增加。</small></div></footer>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
