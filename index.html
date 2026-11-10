@@ -4,58 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111111">
-  <meta name="description" content="Discover curated products and recommendations from PEX. Explore useful finds and visit our partner platforms for product details.">
-  <title>Curated Product Picks | PEX</title>
+  <meta name="description" content="PEX">
+  <title>PEX</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="monochrome.css">
   <link rel="stylesheet" href="everychem-inspired.css">
   <link rel="stylesheet" href="storefront-match.css">
 </head>
 <body>
-  <div class="topline"><span>PEX · PRODUCT EXCHANGE</span><span>Curated product picks · Shop with our partners</span></div>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#" aria-label="PEX Home"><span class="brand-mark">PEX</span><span>PEX<small>PRODUCT EXCHANGE</small></span></a>
-      <form class="search" id="searchForm" role="search">
-        <input id="searchInput" type="search" placeholder="Search recommended products..." aria-label="Search recommended products">
-        <button type="submit" aria-label="Search">Search</button>
-      </form>
-      <div class="header-actions"><a href="#products">Product Picks</a><a href="#footer">About Promotions</a></div>
+      <a class="brand" href="#" aria-label="PEX Home">
+        <span class="brand-mark">PEX</span>
+        <span>PEX<small>PRODUCT EXCHANGE</small></span>
+      </a>
     </div>
   </header>
-  <nav class="category-nav" aria-label="Product categories">
-    <div class="nav-inner" id="categoryNav">
-      <button class="nav-item active" data-category="All">All Picks</button>
-      <button class="nav-item" data-category="Kitchen">Kitchen</button>
-      <button class="nav-item" data-category="Home Storage">Home Storage</button>
-      <button class="nav-item" data-category="Cleaning">Cleaning</button>
-      <button class="nav-item" data-category="Everyday Essentials">Everyday Essentials</button>
-      <button class="nav-item" data-category="Bathroom">Bathroom</button>
-      <button class="nav-item" data-category="Tech Accessories">Tech Accessories</button>
+  <main class="store-main" aria-label="PEX"></main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand footer-brand" href="#">
+        <span class="brand-mark">PEX</span>
+        <span>PEX<small>PRODUCT EXCHANGE</small></span>
+      </a>
+      <small>© <span id="year"></span> PEX</small>
     </div>
-  </nav>
-  <main class="store-main">
-    <section class="catalog-intro">
-      <div class="eyebrow">DISCOVER PRODUCTS</div>
-      <h1>Curated Product Picks</h1>
-      <p>Explore product highlights and follow the links to our partner platforms for details and purchases. PEX does not sell products directly.</p>
-    </section>
-    <section class="catalog-section" id="products">
-      <div class="catalog-heading">
-        <div><div class="eyebrow">HANDPICKED FOR YOU</div><h2>Our Picks</h2></div>
-        <div class="filter-tabs" id="filterTabs"><button class="selected" data-filter="all">All Picks</button><button data-filter="deals">Special Offers</button><button data-filter="new">New Arrivals</button></div>
-      </div>
-      <div class="result-line" id="resultLine">Discover our handpicked finds</div>
-      <div class="product-grid" id="productGrid"></div>
-      <div class="empty-state" id="emptyState" hidden>No matching products found. Try another search term.</div>
-    </section>
-  </main>
-  <footer class="footer" id="footer"><div class="wrap footer-inner">
-    <a class="brand footer-brand" href="#"><span class="brand-mark">PEX</span><span>PEX<small>PRODUCT EXCHANGE</small></span></a>
-    <p>PEX provides product information, recommendations, and referral links only. We do not sell products, collect payments, ship orders, or provide after-sales service.</p>
-    <small>© <span id="year"></span> PEX · Product details, prices, availability, and transaction terms are determined by the partner platform.</small>
-    <small class="disclosure">Promotion disclosure: Some links may be promotional or affiliate links. PEX may earn a commission when you visit or make a purchase through these links. This does not change your transaction relationship with the partner platform.</small>
-  </div></footer>
+  </footer>
   <script src="products.js"></script>
   <script src="app.js"></script>
   <!-- Cloudflare Web Analytics -->
