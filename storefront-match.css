@@ -81,3 +81,10 @@ html,body{margin:0;background:#fff;color:var(--ink);font-family:Arial,"Helvetica
  .footer-inner p,.footer-inner>small{width:100%;margin:0}
 }
 @media(max-width:390px){.topline span:last-child{display:none}.product-grid{gap:18px 10px}.buy-link{padding:6px 7px}}
+
+.product-image-link{display:block;color:inherit;text-decoration:none}
+.product-image{display:block;width:100%;height:100%;object-fit:cover}
+.product-visual .product-emoji[hidden]{display:none}
+.external-note{font-size:9px;color:#888;line-height:1.4}
+.product-bottom{align-items:center}
+@media(max-width:800px){.external-note{font-size:8px}}
