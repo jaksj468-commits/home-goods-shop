@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2563eb">
+  <meta name="theme-color" content="#111111">
   <meta name="description" content="PEX（Product Exchange）— 面向中国市场的商品展示、精选推荐、推广与交易平台。">
   <title>PEX - 商品推广与交易平台</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="monochrome.css">
+  <link rel="stylesheet" href="everychem-inspired.css">
 </head>
 <body>
-  <div class="topline">PEX · PRODUCT EXCHANGE <span>发现好商品 · 连接好生活</span></div>
+  <div class="topline">PEX · PRODUCT EXCHANGE <span>精选日常好物 · 简洁发现</span></div>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#" aria-label="PEX 首页"><span class="brand-mark">PEX</span><span>PEX<small>PRODUCT EXCHANGE</small></span></a>
@@ -18,7 +19,7 @@
         <input id="searchInput" type="search" placeholder="搜一搜：收纳盒、厨房好物、清洁用品…" aria-label="搜索商品">
         <button type="submit">搜索</button>
       </form>
-      <a class="header-link" href="#deals">今日优惠 <b>›</b></a>
+      <a class="header-link" href="#deals">优惠精选 <b>›</b></a>
     </div>
   </header>
   <nav class="category-nav" aria-label="商品分类">
@@ -36,9 +37,9 @@
     <section class="hero wrap">
       <div class="hero-copy">
         <div class="eyebrow">GOOD THINGS FOR EVERYDAY</div>
-        <h1>发现好商品<br><em>连接新价值</em></h1>
-        <p>精选优质商品，汇集实用推荐与优惠信息，让好商品连接更多消费者。</p>
-        <a class="hero-cta" href="#products">探索精选商品 <span>→</span></a>
+        <h1>精选日常好物<br><em>为生活带来灵感</em></h1>
+        <p>探索实用家居、收纳与生活用品。简洁选品，轻松发现值得关注的好物。</p>
+        <a class="hero-cta" href="#products">浏览全部商品 <span>→</span></a>
         <div class="hero-notes"><span>✓ 实用精选</span><span>✓ 优惠推荐</span><span>✓ 每日发现</span></div>
       </div>
       <div class="hero-art" aria-label="家居生活主题插画">
@@ -56,7 +57,7 @@
       <div class="deal-banner"><div><strong>让好商品连接更多消费者</strong><p>商品精选 · 品质推荐 · 优惠发现</p></div><div class="deal-stamp">好物<br>推荐</div></div>
     </section>
     <section class="wrap section" id="products">
-      <div class="section-heading"><div><div class="eyebrow red">HANDPICKED FOR YOU</div><h2>人气好物 <span>为日常生活挑选的小惊喜</span></h2></div><div class="filter-tabs" id="filterTabs"><button class="selected" data-filter="all">全部</button><button data-filter="deals">优惠</button><button data-filter="new">新品</button></div></div>
+      <div class="section-heading"><div><div class="eyebrow red">HANDPICKED FOR YOU</div><h2>精选商品 <span>为日常生活发现实用好物</span></h2></div><div class="filter-tabs" id="filterTabs"><button class="selected" data-filter="all">全部</button><button data-filter="deals">优惠</button><button data-filter="new">新品</button></div></div>
       <div class="result-line" id="resultLine">为你精选好物</div>
       <div class="product-grid" id="productGrid"></div>
       <div class="empty-state" id="emptyState" hidden>没有找到相关商品，换个关键词试试吧。</div>
