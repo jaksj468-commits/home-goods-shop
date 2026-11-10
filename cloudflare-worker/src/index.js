@@ -119,7 +119,7 @@ async function sign(value, secret) {
 function base64url(bytes) {
   let binary = "";
   for (const byte of bytes) binary += String.fromCharCode(byte);
-  return btoa(binary).replace(/=/g, "").replace(/\\+/g, "-").replace(/\\//g, "_");
+  return btoa(binary).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
 }
 
 function constantTimeEqual(a, b) {
@@ -130,7 +130,7 @@ function constantTimeEqual(a, b) {
 }
 
 function safeNext(value) {
-  if (typeof value !== "string" || !value.startsWith("/") || value.startsWith("//") || value.includes("\\r") || value.includes("\\n")) return "/";
+  if (typeof value !== "string" || !value.startsWith("/") || value.startsWith("//") || value.includes("\r") || value.includes("\n")) return "/";
   return value;
 }
 
