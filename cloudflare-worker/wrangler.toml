@@ -1,0 +1,9 @@
+name = "pex-gate"
+main = "src/index.js"
+compatibility_date = "2026-11-10"
+workers_dev = true
+
+[vars]
+UPSTREAM_ORIGIN = "https://pexshop.github.io"
+# Set TURNSTILE_SITEKEY in the Worker dashboard as a plain variable.
+# Add TURNSTILE_SECRET and SESSION_SECRET as encrypted Secrets.
