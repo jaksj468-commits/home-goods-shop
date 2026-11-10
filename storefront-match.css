@@ -88,3 +88,15 @@ html,body{margin:0;background:#fff;color:var(--ink);font-family:Arial,"Helvetica
 .external-note{font-size:9px;color:#888;line-height:1.4}
 .product-bottom{align-items:center}
 @media(max-width:800px){.external-note{font-size:8px}}
+
+/* Pinned PEX clothing showcase */
+.pinned-clothing{background:#f7f7f7;border-bottom:1px solid #e8e8e8;padding:25px 0 27px}
+.pinned-clothing-inner{width:min(1320px,calc(100% - 48px));margin:0 auto}
+.pinned-clothing-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}
+.pinned-clothing-heading h2{margin:6px 0 4px;font-size:22px;font-weight:600;letter-spacing:-.03em}
+.pinned-clothing-heading p{margin:0;color:#777;font-size:11px}
+.clothing-more{color:#111;text-decoration:none;border-bottom:1px solid #111;padding:0 0 4px;font-size:10px;white-space:nowrap}
+.pinned-clothing-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.clothing-card{background:#fff}
+.clothing-card .product-visual{background:#fff}
+@media(max-width:800px){.pinned-clothing-inner{width:calc(100% - 28px)}.pinned-clothing{padding:20px 0 22px}.pinned-clothing-heading h2{font-size:19px}.pinned-clothing-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}}
