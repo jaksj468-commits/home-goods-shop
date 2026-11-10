@@ -4,28 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111111">
-  <meta name="description" content="PEX 好物集市，精选家居、厨房、收纳与日常用品。">
-  <title>PEX 好物集市</title>
+  <meta name="description" content="PEX 商品精选与推广展示。发现好物，点击查看合作平台商品详情。">
+  <title>PEX 商品精选｜PEX</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="monochrome.css">
   <link rel="stylesheet" href="everychem-inspired.css">
   <link rel="stylesheet" href="storefront-match.css">
 </head>
 <body>
-  <div class="topline"><span>PEX · PRODUCT EXCHANGE</span><span>精选日常好物 · 发现生活灵感</span></div>
+  <div class="topline"><span>PEX · PRODUCT EXCHANGE</span><span>精选商品推荐 · 点击前往合作平台</span></div>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#" aria-label="PEX 首页"><span class="brand-mark">PEX</span><span>PEX<small>PRODUCT EXCHANGE</small></span></a>
       <form class="search" id="searchForm" role="search">
-        <input id="searchInput" type="search" placeholder="搜索商品…" aria-label="搜索商品">
+        <input id="searchInput" type="search" placeholder="搜索推荐商品…" aria-label="搜索推荐商品">
         <button type="submit" aria-label="搜索">搜索</button>
       </form>
-      <div class="header-actions"><a href="#products">我的精选</a><a href="#footer">帮助中心</a></div>
+      <div class="header-actions"><a href="#products">商品推荐</a><a href="#footer">推广说明</a></div>
     </div>
   </header>
   <nav class="category-nav" aria-label="商品分类">
     <div class="nav-inner" id="categoryNav">
-      <button class="nav-item active" data-category="全部">首页</button>
+      <button class="nav-item active" data-category="全部">全部推荐</button>
       <button class="nav-item" data-category="厨房用品">厨房用品</button>
       <button class="nav-item" data-category="家居收纳">家居收纳</button>
       <button class="nav-item" data-category="清洁用品">清洁用品</button>
@@ -36,23 +36,14 @@
   </nav>
   <main class="store-main">
     <section class="catalog-intro">
-      <div class="eyebrow">DISCOVER EVERYDAY ESSENTIALS</div>
-      <h1>精选好物</h1>
-      <p>为日常生活挑选实用、简约、有品质的商品</p>
-    </section>
-    <section class="catalog-categories" aria-label="商品分类快捷入口">
-      <button class="catalog-category active" data-category="全部">全部商品</button>
-      <button class="catalog-category" data-category="厨房用品">厨房用品</button>
-      <button class="catalog-category" data-category="家居收纳">家居收纳</button>
-      <button class="catalog-category" data-category="清洁用品">清洁用品</button>
-      <button class="catalog-category" data-category="居家日用">居家日用</button>
-      <button class="catalog-category" data-category="浴室用品">浴室用品</button>
-      <button class="catalog-category" data-category="数码小物">数码小物</button>
+      <div class="eyebrow">DISCOVER PRODUCTS</div>
+      <h1>精选商品推荐</h1>
+      <p>浏览商品介绍，点击按钮前往合作平台查看详情及购买。PEX 不直接销售商品。</p>
     </section>
     <section class="catalog-section" id="products">
       <div class="catalog-heading">
-        <div><div class="eyebrow">HANDPICKED FOR YOU</div><h2>全部商品</h2></div>
-        <div class="filter-tabs" id="filterTabs"><button class="selected" data-filter="all">精选商品</button><button data-filter="deals">优惠商品</button><button data-filter="new">新品上架</button></div>
+        <div><div class="eyebrow">HANDPICKED FOR YOU</div><h2>为你精选</h2></div>
+        <div class="filter-tabs" id="filterTabs"><button class="selected" data-filter="all">全部推荐</button><button data-filter="deals">优惠推荐</button><button data-filter="new">新品推荐</button></div>
       </div>
       <div class="result-line" id="resultLine">为你精选好物</div>
       <div class="product-grid" id="productGrid"></div>
@@ -61,24 +52,11 @@
   </main>
   <footer class="footer" id="footer"><div class="wrap footer-inner">
     <a class="brand footer-brand" href="#"><span class="brand-mark">PEX</span><span>PEX<small>PRODUCT EXCHANGE</small></span></a>
-    <p>精选日常好物 · 发现生活灵感</p>
-    <small>© <span id="year"></span> PEX · 商品信息仅供参考</small>
-    <small class="disclosure">推广说明：部分商品链接可能为推广链接；通过链接购买，网站可能获得推广佣金，商品价格不因此额外增加。</small>
+    <p>PEX 仅提供商品信息展示与推广导流，不参与商品销售、收款、发货或售后。</p>
+    <small>© <span id="year"></span> PEX · 商品详情、价格、库存及交易规则以跳转平台为准</small>
+    <small class="disclosure">推广说明：部分链接可能为推广/联盟链接。用户通过链接访问或购买时，PEX 可能获得佣金；这不会改变合作平台的商品交易关系。</small>
   </div></footer>
   <script src="products.js"></script>
   <script src="app.js"></script>
-  <script>
-    document.addEventListener("click", function(event) {
-      const button = event.target.closest(".catalog-category");
-      if (!button) return;
-      const category = button.dataset.category;
-      document.querySelectorAll(".catalog-category").forEach(item => item.classList.toggle("active", item === button));
-      const navButton = document.querySelector('.nav-item[data-category="' + category + '"]');
-      if (navButton) navButton.click();
-    });
-    document.querySelectorAll(".nav-item").forEach(button => button.addEventListener("click", () => {
-      document.querySelectorAll(".catalog-category").forEach(item => item.classList.toggle("active", item.dataset.category === button.dataset.category));
-    }));
-  </script>
 </body>
 </html>
