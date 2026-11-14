@@ -52,7 +52,7 @@ async function verifyHuman(request, url, env) {
   const form = await request.formData();
   const token = form.get("cf-turnstile-response");
   if (typeof token !== "string" || !token) {
-    return new Response("Verification missing. Please go back and try again.", { status: 400 });
+    return new Response("验证信息缺失，请返回后重试。", { status: 400 });
   }
 
   const body = new URLSearchParams({
@@ -69,7 +69,7 @@ async function verifyHuman(request, url, env) {
   });
   const result = await check.json();
   if (!result.success || (result.action && result.action !== "pex_gate")) {
-    return new Response(challengePage(env.TURNSTILE_SITEKEY, safeNext(form.get("next")) , "Verification failed. Please try again."), {
+    return new Response(challengePage(env.TURNSTILE_SITEKEY, safeNext(form.get("next")) , "验证失败，请重试。"), {
       status: 403,
       headers: { "content-type": "text/html; charset=UTF-8", "cache-control": "no-store" }
     });
@@ -138,12 +138,12 @@ function challengePage(sitekey, next, error = "") {
   const safePath = escapeHtml(safeNext(next));
   const message = error ? `<p class="error">${escapeHtml(error)}</p>` : "";
   return `<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Security Check — PEX</title>
+<title>www.pexshop.com — 安全验证</title>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <style>
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:#0a0a0a;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif;display:grid;place-items:center;padding:24px}
@@ -155,16 +155,16 @@ small{display:block;color:#666;margin-top:25px;font-size:11px}
 </style>
 </head>
 <body><main class="panel">
-<div class="brand">PEX</div><div class="line"></div>
-<h1>Verify that you are human</h1>
-<p>Please complete this quick security check to continue to PEX.</p>
+<div class="brand">www.pexshop.com</div><div class="line"></div>
+<h1>正在进行安全验证</h1>
+<p>本网站使用安全服务防护恶意自动程序。在验证您不是自动程序期间，将显示此页面。</p>
 ${message}
 <form method="POST" action="/__verify">
 <input type="hidden" name="next" value="${safePath}">
 <div class="widget"><div class="cf-turnstile" data-sitekey="${escapeHtml(sitekey)}" data-action="pex_gate" data-theme="dark"></div></div>
-<button type="submit">CONTINUE</button>
+<button type="submit">继续</button>
 </form>
-<small>SECURITY CHECK · PEX</small>
+<small>安全验证 · www.pexshop.com</small>
 </main></body></html>`;
 }
 
